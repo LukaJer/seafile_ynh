@@ -33,7 +33,7 @@ pkill -f ccnet-server || true
 pkill -f seahub || true
 
 ynh_script_progression --message="Removing logs..."
-ynh_secure_remove --file=/var/log/seafile
+#ynh_secure_remove --file=/var/log/seafile
 ynh_script_progression --message="Removing code..."
 ynh_secure_remove --file=/var/www/$app
 ynh_secure_remove --file=/opt/yunohost/$app
