@@ -218,8 +218,8 @@ ynh_script_progression --message="Stoping services..." --weight=3
 ynh_script_progression --message="Starting seafile services..." --weight=3
 ynh_systemd_action --service_name seafile -l "spawned seaf-server, pid " -p /var/log/seafile/controller.log
 sleep 2
-rm -rf $final_path/seafile-server-latest/seahub/thirdparty/MySQLdb
-rm -rf $final_path/seafile-server-latest/seahub/thirdparty/PIL
+rm -rf /opt/yunohost/seafile/seafile-server-latest/seahub/thirdpart/MySQLdb
+rm -rf /opt/yunohost/seafile/seafile-server-latest/seahub/thirdpart/PIL
 ynh_systemd_action --service_name seahub -l "Started Seafile hub." -p "systemd"
 sleep 2
 
